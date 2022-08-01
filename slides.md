@@ -70,12 +70,11 @@ text-align: left;
 * Subjects
 
 <p> 
-    the "calculation cells" are often referred to as
+    the "calculation cells" are often referred to as Observers
 </p>
 
-* Memos 
-* Computeds
-* Derivations
+* Reactions, Effects, Autoruns, Watches 
+* Memos, Computeds, Derivations
 
 ---
 
@@ -103,17 +102,17 @@ function observable<T>(value: T) {
 
 ---
 
-# Computeds
+# Observers
 
-Generally, there are 2 types of computeds: Effectful Computeds & Pure Computeds
+Generally, there are 2 types of observers: Effectful Observers & Pure Observers
 
 ---
 
-# Effectful Computeds 
+# Effectful Observers 
 
-AKA Reactions, Effects, Autoruns, Watches
+AKA Reactions, Autoruns, Effects, Watches
 
-Effectful Computeds create side effects.
+Effectful Observers create side effects.
 Side effects are when you modify values outside the scope of the calling procedure.
 
 ```ts {all|2|1-6|9|all}
@@ -125,7 +124,7 @@ function autorun(fn: Callback) {
 ```
 ---
 
-# Pure Computeds (AKA Computeds, Memos, Derivations)
+# Pure Observers (AKA Computeds, Memos, Derivations)
 
 Are used to derive values from observables
 
